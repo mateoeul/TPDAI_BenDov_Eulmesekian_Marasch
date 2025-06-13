@@ -113,6 +113,13 @@ const App = () => {
             <Text style={{ fontWeight: "bold" }}>Género: </Text>
             {movieData.Genre}
           </Text>
+
+          {movieData.Ratings.map((rating, index) => (
+          <Text key={index}>
+            {rating.Source}: {rating.Value}
+          </Text>
+))}
+
         </View>
       )}
     </SafeAreaView>
